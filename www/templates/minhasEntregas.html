@@ -1,0 +1,20 @@
+<ion-view title="Minhas Entregas" hide-back-button="true" id="page14">
+  <ion-content padding="true" style="background: url(img/AEu0Sy4PTniNAB145VIN_bg-loading.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <ion-list id="minhasEntregas-list2">
+      <div class="item item-body" id="minhasEntregas-list-item-container10" ng-repeat="pedido in data.data">
+        <div id="minhasEntregas-markdown26" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+            <strong>Data:</strong> {{pedido.data_venda}}</p>
+
+          <p style="color:#000000;">
+            <strong>Restaurante</strong>:
+            <strong>{{pedido.Empresa.nome}}</strong>
+          </p>
+
+          <p style="color:#000000;">
+            <strong>Destino:</strong> {{pedido.logradouro}}, {{pedido.numero}} {{pedido.complemento}} - {{pedido.bairro}}</p>
+        </div>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

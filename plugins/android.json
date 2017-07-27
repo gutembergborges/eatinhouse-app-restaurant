@@ -1,0 +1,37 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+        }
+    }
+}

@@ -1,0 +1,68 @@
+<ion-view title="Dashboard" cache-view="false" id="page20">
+  <ion-content padding="false" style="background: url(img/HBd7UfpfRBKKvdohtt3p_fundo-App.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <div id="dashboards-container10">
+      <ion-list id="dashboards-list13">
+        <ion-item class="item-avatar" id="dashboards-list-item15"   ui-sref="menu.meuPerfil">
+          <img src="img/user.png">
+          <h2>Acessoweb</h2>
+          
+        </ion-item>
+      </ion-list>
+      <div class="spacer" style="width: 0px; height: 14px;"></div>
+      <ion-col class="row">
+        <ion-col class="col col-50" ui-sref="menu.agenda">
+          <p style="background: #f66b6b; color: #fff; padding: 10px;border-radius: 3px;    height: 180px;">
+            <span style="display: block; font-size: 40px;line-height: 50px">
+              <ion-icon style="font-size: 30px;" class="icon ion-calendar"></ion-icon> {{agenda}}
+              <ion >
+                <i style="float:right; color: rgba(255,255,255,0.5);" class="icon ion-android-add-circle"></i>
+              </ion>
+            </span>
+            Last Orders
+
+          </p>
+        </ion-col>
+        <ion-col class="col col-50" ui-sref="menu.minhasMetas">
+          <p style="background: #a485f2; color: #fff; padding: 10px; border-radius: 3px;    height: 180px;">
+            <span style="display: block; font-size: 40px;line-height: 50px">
+              <ion-icon style="font-size: 30px;" class="icon ion-podium"></ion-icon> {{meta}}
+              <ion >
+                <i style="float:right; color: rgba(255,255,255,0.5);" class="icon ion-android-add-circle"></i>
+              </ion>
+            </span>
+            Orders
+
+          </p>
+        </ion-col>
+      </ion-col>
+      <ion-col class="row">
+        <ion-col class="col col-50" ui-sref="menu.listaDeContatos">
+          <p style="background: #499749; color: #fff; padding: 10px; border-radius: 3px;    height: 180px;">
+            <span style="display: block; font-size: 40px;line-height: 50px">
+              <ion-icon style="font-size: 30px;" class="icon ion-ios-contact"></ion-icon> {{contato}}
+              <ion >
+                <i style="float:right; color: rgba(255,255,255,0.5);" class="icon ion-android-add-circle"></i>
+              </ion>
+            </span>
+            Meus Contatos
+          </p>
+        </ion-col>
+        <ion-col class="col col-50" ui-sref="menu.lojaVirtual">
+          <p style="background: #4798f2; color: #fff; padding: 10px;border-radius: 3px;    height: 180px;">
+            <span style="display: block; font-size: 40px;line-height: 50px">
+              <ion-icon style="font-size: 30px;" class="icon ion-android-cart"></ion-icon> {{loja}}
+              <ion >
+                <i style="float:right; color: rgba(255,255,255,0.5);" class="icon ion-android-add-circle"></i>
+              </ion>
+            </span>
+            Loja Virtual
+
+          </p>
+        </ion-col>
+      </ion-col>
+     
+      <div></div>
+    </div>
+    <div></div>
+  </ion-content>
+</ion-view>

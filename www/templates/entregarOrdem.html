@@ -1,0 +1,24 @@
+<ion-view title="Deliver order" hide-back-button="true" id="page13">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button icon ion-close-round" ng-click="cancelarOrdem()"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <ion-list id="entregarOrdem-list14">
+      <ion-item class="item-avatar" id="entregarOrdem-list-item12">
+        <img src="img/XDtsHvNTZeQT1FuEQjId_761949ee8da3e47.jpg">
+        <h2>{{data.logradouro}}, {{data.numero}} {{data.complemento}}</h2>
+        <p>{{data.bairro}}</p>
+      </ion-item>
+      <ion-item class="item-divider" id="entregarOrdem-list-item-divider3"> </ion-item>
+    </ion-list>
+    <h3 id="entregarOrdem-heading13" style="color:#000000;">Order #{{data.id}}</h3>
+    <div id="entregarOrdem-markdown22" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">{{data.itens}} Item(s) to deliver</p>
+    </div>
+    <form id="entregarOrdem-form10" class="list">
+      <ion-checkbox id="entregarOrdem-checkbox6" ng-repeat="vendaProduto in data.VendaProduto" ng-model="checkItems[vendaProduto.id]" ng-change="print()">{{vendaProduto.EmpresaProduto.nome}}</ion-checkbox>
+      <ion-item class="item-divider" id="entregarOrdem-list-item-divider4"> </ion-item>
+      <button id="entregarOrdem-button10" ng-click="entregarOrdem()" class="button button-royal button-block">Delivered</button>
+    </form>
+  </ion-content>
+</ion-view>

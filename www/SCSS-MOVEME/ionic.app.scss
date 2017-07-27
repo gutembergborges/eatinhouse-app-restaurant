@@ -1,0 +1,53 @@
+$royal: #AF1483;
+$stable: #D9D9D9;
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "../www/lib/ionic/scss";
+// This code is required for Angular Google Maps to funciton
+ui-gmap-google-map {
+	height: 100%;
+	width: 100%;
+	display: block;
+	.angular-google-map {
+		height: 100%;
+		.angular-google-map-container {
+			height: 100%;
+		}
+		
+	}
+}
+.form-entrega-cliente {
+	padding: 0px 10px;
+}
+
+.label-bold {
+	font-weight: 600;
+}
+
+.item-menu .icon {
+	color: #b21d55;
+}
+
+body {
+	color: #443131;
+}
+
+body.platform-ios {
+	font-family: 'Noto Sans', sans-serif;
+}
+
+.ionic-body.platform-ios {
+	font-family: 'Noto Sans', sans-serif;
+}
+
+body.platform-android {
+	font-family: 'Noto Sans', sans-serif;
+}
+
+.ionic-body.platform-android {
+	font-family: 'Noto Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.tab-item,input,button,select,textarea {
+	font-family: inherit;
+}
+

@@ -1,0 +1,19 @@
+<ion-view title="New Order!" hide-back-button="true" id="page11">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button icon ion-close-round" ng-click="rejeitarOrdem()"></button>
+  </ion-nav-buttons>
+  <ion-content padding="false" class="has-header">
+    <ui-gmap-google-map ng-if="map.center" center="map.center" zoom="map.zoom" options="map.options" style="height:330px;" id="map" directions="{{}}">
+    </ui-gmap-google-map>
+    <div class="spacer" style="width: 320px; height: 25px;"></div>
+    <form id="novaOrdem-form13" class="list form-entrega-cliente">
+      <h3 id="novaOrdem-heading11" style="color:#000000;font-weight:600;text-align:center;">Collect from:</h3>
+      <center>
+        <b style="font-size: 15px;">{{data.Empresa.nome}}</b>
+        <br> {{data.Empresa.logradouro}}, {{data.Empresa.numero}} {{data.Empresa.complemento}}
+        <br> {{data.Empresa.bairro}}
+      </center>
+      <button id="novaOrdem-button9" ng-click="aceitarEntrega()" class="button button-royal button-block">Accept order</button>
+    </form>
+  </ion-content>
+</ion-view>

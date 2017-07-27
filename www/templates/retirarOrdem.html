@@ -1,0 +1,25 @@
+<ion-view title="Take out order" hide-back-button="true" id="page9">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button icon ion-close-round" ng-click="cancelarOrdem()"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <h3 id="retirarOrdem-heading10" style="color:#000000;font-weight:600;">{{data.Empresa.nome}}</h3>
+    <ion-list id="retirarOrdem-list13">
+      <ion-item class="item-avatar" id="retirarOrdem-list-item11">
+        <img src="http://eatinhousedelivery.com/images/empresa/{{data.Empresa.imagem}}">
+        <h2> {{data.Empresa.logradouro}}, {{data.Empresa.numero}} {{data.Empresa.complemento}}</h2>
+        <p>{{data.Empresa.bairro}}</p>
+      </ion-item>
+      <ion-item class="item-divider" id="retirarOrdem-list-item-divider1"> </ion-item>
+    </ion-list>
+    <h3 id="retirarOrdem-heading9" style="color:#000000;">Order #{{data.id}}</h3>
+    <div id="retirarOrdem-markdown20" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">{{data.itens}} item(s) to take</p>
+    </div>
+    <form id="retirarOrdem-form8" class="list">
+      <ion-checkbox id="retirarOrdem-checkbox3" ng-repeat="vendaProduto in data.VendaProduto" ng-model="checkItems[vendaProduto.id]" ng-change="print()">{{vendaProduto.EmpresaProduto.nome}}</ion-checkbox>
+      <ion-item class="item-divider" id="retirarOrdem-list-item-divider2"> </ion-item>
+      <button id="retirarOrdem-button8" ng-click="coletarOrdem()" class="button button-royal button-block">Take</button>
+    </form>
+  </ion-content>
+</ion-view>
