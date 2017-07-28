@@ -17,36 +17,19 @@
         <ion-item class="item-avatar royal label-bold" id="menu-list-item23">
           <img src="img/zGhUl741Sdi9SrgSTnKT_761949ee8da3e47.jpg">
           <h2royal>{{nome_entregador}}
-            <p>Available for delivery!</p>
+           
           </h2royal>
         </ion-item>
-        <div class="item item-body" id="menu-list-item-container9">
-          <div id="menu-markdown13" class="show-list-numbers-and-dots">
-            <p style="margin-top:0px;color:#000000;">
-              <strong>Contacts</strong>
-            </p>
-
-            <p style="color:#000000;">When you are driving, the restaurant information will appear here!</p>
-          </div>
-        </div>
-        <ion-item class="item-icon-right item-menu" id="menu-list-item1" ui-sref="menu.aguardando()" menu-close="">Home
-          <i class="icon ion-ios-home-outline"></i>
+       
+        <ion-item class="item-icon-right item-menu" id="menu-list-item1" ui-sref="menu.aguardando()" menu-close="">Dashboard
+          <i class="icon ion-arrow-graph-up-right"></i>
         </ion-item>
-        <ion-item class="item-icon-right item-menu" id="menu-list-item6" ui-sref="menu.ferramentas()" menu-close="" ng-show="mostrar == 1">Ferramentas
-          <i class="icon ion-ios-cog-outline"></i>
-        </ion-item>
+        <ion-item class="item-icon-right item-menu" id="menu-list-item10" ui-sref="menu.ordemLista()" menu-close="">Orders
+          <i class="icon ion-ios-list-outline"></i>
+        </ion-item>       
         <ion-item class="item-icon-right item-menu" id="menu-list-item7" ui-sref="menu.ajuda()" menu-close="">Help
           <i class="icon ion-information-circled"></i>
-        </ion-item>
-        <ion-item class="item-icon-right item-menu" id="menu-list-item8" ui-sref="menu.sugerirUmAmigo()" menu-close="" ng-show="mostrar == 1">Sugerir Amigo
-          <i class="icon ion-android-share-alt"></i>
-        </ion-item>
-        <ion-item class="item-icon-right item-menu" id="menu-list-item9" ng-show="$root.venda_id != ''">Cancel order
-          <i class="icon ion-close-round"></i>
-        </ion-item>
-        <ion-item class="item-icon-right item-menu" id="menu-list-item10" ui-sref="menu.minhasEntregas()" menu-close="">My deliveries
-          <i class="icon ion-ios-list-outline"></i>
-        </ion-item>
+        </ion-item>        
         <ion-item class="item-icon-right item-menu" id="menu-list-item13" ng-click="logout()">Exit
           <i class="icon ion-log-out"></i>
         </ion-item>

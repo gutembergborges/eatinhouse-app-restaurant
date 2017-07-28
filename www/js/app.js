@@ -7,13 +7,13 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services','uiGmapgoogle-maps','googlemaps.init','firebase','firebaseConfig','ngCordova',])
 
-.config(function($ionicConfigProvider, $sceDelegateProvider){
+.config(function($ionicConfigProvider, $sceDelegateProvider,){
 
   $sceDelegateProvider.resourceUrlWhitelist([ 'self','*://www.youtube.com/**', '*://player.vimeo.com/video/**']);
 
 })
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform,$rootScope,$timeout,Config,Util,$http) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -26,6 +26,58 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
       StatusBar.styleDefault();
     }
   });
+
+
+    $rootScope.notificacaoNaoLido = 0;
+  function refreshNotification(){
+    $http({
+      method: 'GET',
+      url: `${Util.url}notificacao/auto-search/`
+    }).then(function successCallback(response) {
+      console.log(response);
+      $rootScope.notificacaoNaoLido = response.data.notificacaoNaoLido;
+      // console.log(response.data.notificacao);
+      if(response.data.notificacao != null){ // se n�o for vazio
+        Lobibox.notify(response.data.notificacao.tipo, {
+          soundPath: 'sounds/',   // The folder path where sounds are located
+          sound: 'sound4',
+          // img:  $rootScope.patches.pathThumbMobile + usuariomsg.fotorosto, //path to image
+          // msg:  usuariomsg.primeironome + $msgFavorito ,
+          icon: 'icon ion-ios-information-outline',
+          title: response.data.notificacao.titulo ,
+          msg: response.data.notificacao.texto ,
+          size: 'normal',
+          delay: Config.delayNotificacao,  //In milliseconds
+          showClass: 'zoomIn',
+          hideClass: 'zoomOut' ,
+          // sound: $sound ,
+          position: "top",
+          onClick: function(){
+            $state.go('menu.detalheNotificacoes', {id: response.data.notificacao.id});
+          }
+            //, 
+            //onClick: function(){
+            //    $location.path('/app/favoritosmeu');
+            //    alert('Abro agora a combinacao pendente  para esse nego  id= ' + usuariomsg.idusuario);
+            // } 
+        });
+      }
+    });
+  }
+  function recursiveNotification(){
+    $timeout(function() {
+      console.log('entrou');
+      if(Config.enabledNotification){
+        console.log('rodou');
+        refreshNotification();
+      }
+      recursiveNotification();
+    }, Config.timerNotificacao);
+  }
+
+  recursiveNotification();
+  refreshNotification();
+
 })
 
 /*

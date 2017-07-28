@@ -1,0 +1,65 @@
+<ion-view title="Order Details" cache-view="false" id="ordem-lista">
+
+    <ion-content padding="false"  class="has-header">
+    <div class="spacer" style="width: 0px; height: 14px;"></div>
+    <div>
+      <div style="margin-top: 10%;font-size: 20px;"><center>Order Number</center></div>
+      <div style="font-size: 22px;font-weight: bolder;"><center>{{ordem}}</center></div>
+    </div>    
+
+    <div class="spacer" style="width: 300px; height: 10px;"></div>
+    <div class="spacer" style="width: 300px; height: 10px;"></div>
+
+    <div class="list">
+      <div class="item item-divider">
+        <center>Items</center>
+      </div>
+
+      <div class="list" ng-repeat="p in meusPedidosDetalhe.data.produto">
+      <div class="row">
+        <div class="col-10">
+          {{p.qtd}}x
+        </div>
+        <div class="col-67">
+          <span>{{p.nome}}</span>
+          <div ng-repeat="ad in p.adicional" >
+           <span>{{ad}}</span>
+         </div><br>
+        </div>
+        <div class="col-20">
+         
+        </div>
+
+      </div>
+      
+     
+      </div>
+
+      
+    </div>
+
+
+         
+    
+  </ion-content>
+<!--   <ion-footer-bar align-title="left" class="bar-dark">
+  <div class="buttons">
+    <button class="button">Left Button</button>
+  </div>
+  <h1 class="title">Title!</h1>
+  <div class="buttons" ng-click="doSomething()">
+    <button class="button">Right Button</button>
+  </div>
+</ion-footer-bar> -->
+<ion-footer-bar  class="bar-dark icones" style="display: flex;flex-wrap: wrap;justify-content: space-around;justify-content: baseline;">
+  
+   <button class="button button-positive" style="width: 45%;">Order Accepted</button>
+
+
+ 
+  <button class="button button-balanced" style="width: 45%;">Call the driver</button>
+  
+  
+  
+</ion-footer-bar>
+</ion-view>

@@ -1,0 +1,41 @@
+ .my-custom-popup .popup .popup-buttons {
+  flex-direction: column;
+      padding: 9%;
+}
+
+ .my-custom-popup .popup .popup-buttons button {
+  margin-bottom: 1rem;
+  width: 200px;
+}
+
+.my-custom-popup .popup{
+  background: #474747 !important;
+}
+.my-custom-popup .popup-title{
+  color: #fff;
+}
+.my-custom-popup .popup .popup-head{
+  border-bottom: 0px solid #eee; 
+}
+.my-custom-popup .popup .button-black{
+  background: #666;
+  border: 1px solid #00ffff;
+  color: #fff;
+  border-radius: 7px;
+}
+.my-custom-popup .popup .button-black-shine{
+  background: #666;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  border-radius: 7px;
+}
+.my-custom-popup .popup .button .icon{
+  color: #3a3a3a;
+}
+
+.popup-buttons .popclose{
+  background: rgba(70, 70, 70, 0) !important;
+  border: 1px solid #464646 !important;
+  color: #fff !important;;
+  border-radius: 7px;
+}

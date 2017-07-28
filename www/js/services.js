@@ -43,4 +43,17 @@ angular.module('app.services', [])
             return $ionicSideMenuDelegate.toggleLeft();
         }
     }
-});
+})
+
+.service('Util', [function(){
+    return{
+
+        url: 'https://www.eatinhousedelivery.co.uk/api/'
+    }
+}])
+
+.service('Config', [function(){
+    this.timerNotificacao = 3000; // Intervalo entre as requisições
+    this.delayNotificacao = 45000; // Tempo que a notificação fica disponível
+    this.enabledNotification = true;
+}]);

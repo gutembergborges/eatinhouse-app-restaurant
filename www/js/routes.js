@@ -113,6 +113,30 @@ angular.module('app.routes', [])
     }
   })
 
+    .state('menu.ordemLista', {
+    url: '/ordem-lista',
+    views: {
+      'side-menu21': {
+        templateUrl: 'pages/ordemLista/ordemLista.html',
+        controller: 'ordemListaCtrl'
+      }
+    }
+  })
+
+    .state('menu.ordemDetalhe', {
+    url: '/ordem-detalhe',
+    params: {
+      id: ""    
+    },
+    views: {
+      'side-menu21': {
+        templateUrl: 'pages/ordemDetalhe/ordemDetalhe.html',
+        controller: 'ordemDetalheCtrl'
+      }
+    }
+  })
+
+
 $urlRouterProvider.otherwise('/login')
 
 
