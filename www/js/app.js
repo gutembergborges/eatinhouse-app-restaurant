@@ -30,9 +30,10 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
 
     $rootScope.notificacaoNaoLido = 0;
   function refreshNotification(){
+    // let token = localStorage.getItem('token');
     $http({
       method: 'GET',
-      url: `${Util.url}notificacao/auto-search/`
+      url: `${Util.url}notificacao/auto-search/empresa_id/${localStorage.getItem('token')}`
     }).then(function successCallback(response) {
       console.log(response);
       $rootScope.notificacaoNaoLido = response.data.notificacaoNaoLido;
