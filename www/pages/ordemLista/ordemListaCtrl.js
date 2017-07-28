@@ -5,9 +5,13 @@ angular.module('app.controllers')
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, controleError,Util) {
 
+    atualizaLista();
+   
 
-    let token = localStorage.getItem('token');
 
+
+ function atualizaLista(){
+     let token = localStorage.getItem('token');
     $http.get(`${Util.url}restaurantepedidos/search/list/empresa_id/${token}`)
         .success(function(response){
             console.log(response);
@@ -25,6 +29,12 @@ function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, contr
             // $scope.numero = response.data.endereco.numero;                               
             
         })
+        }
+
+            $scope.atualiza = function(){
+        atualizaLista();
+    }
+
 
      $scope.showConfirm = function() {            
 
