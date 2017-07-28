@@ -1,0 +1,39 @@
+<ion-view title="Login" hide-nav-bar="true" hide-back-button="true" cache-view="false" id="page1">
+  <ion-content padding="true" style="background: url(img/restaurantes_login.png) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding" scroll="false">
+    <div class="spacer" style="width: 300px; height: 66px;"></div>
+    <div>
+      <!-- <img src="img/logo_eat.png" style="display: block; width: 73%; height: auto; margin-left: auto; margin-right: auto;"> -->
+    </div>
+    <div class="spacer" style="width: 300px; height: 325px;"></div>
+    <div id="login-container1">
+
+     <center>
+      <form id="login-form2" class="list" style="width: 80%;">
+        <label class="item item-input" id="login-input4" name="usuario" >
+         
+          <input type="text" placeholder="Email" ng-model="email">
+        </label>
+        <label class="item item-input" id="login-input5" name="senha" >
+          
+          <input type="password" placeholder="Password" ng-model="senha">
+        </label>
+        <br><br>
+      <div id='extra-info'>       
+        <a href="" ng-click="alterarSenha()">Esqueci minha senha</a>
+        <label class="checkbox-2">
+          <input type="checkbox" ng-model='lembrar' ng-checked="lembrarinput">
+          <span>Lembre-me</span>
+        </label>
+      </div>
+<br><br>
+
+
+
+
+        <button  id="login-button6" ng-click="update(email,senha, lembrar)" class="button button-royal button-block">Sign in</button>
+      </form>
+      </center>
+    </div>
+  </ion-content>
+</ion-view>
+

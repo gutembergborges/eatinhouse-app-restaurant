@@ -66,9 +66,9 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
   }
   function recursiveNotification(){
     $timeout(function() {
-      console.log('entrou');
+      // console.log('entrou');
       if(Config.enabledNotification){
-        console.log('rodou');
+        // console.log('rodou');
         refreshNotification();
       }
       recursiveNotification();

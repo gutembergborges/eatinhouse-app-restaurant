@@ -1,12 +1,14 @@
 angular.module('app.controllers')
   
-.controller('ordemListaCtrl', ['$scope', '$stateParams', '$http', '$rootScope', '$ionicPopup', '$location', 'controleError', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('ordemListaCtrl', ['$scope', '$stateParams', '$http', '$rootScope', '$ionicPopup', '$location', 'controleError','Util', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, controleError) {
+function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, controleError,Util) {
 
 
-    $http.get(`http://www.eatinhousedelivery.co.uk/api/restaurantepedidos/search/list/`)
+    let token = localStorage.getItem('token');
+
+    $http.get(`${Util.url}restaurantepedidos/search/list/empresa_id/${token}`)
         .success(function(response){
             console.log(response);
             $scope.listaDePedidos = response;                  

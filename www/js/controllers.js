@@ -1,32 +1,32 @@
 angular.module('app.controllers', [])
   
-.controller('loginCtrl', ['$scope', '$stateParams', '$http', '$rootScope', '$ionicPopup', '$location', 'controleError', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, controleError) {
-    if($rootScope.entregador_id&&$rootScope.entregador_id!=''){
-        $location.path('/menu/aguardando');
-    }
-    $scope.acessoLogin = function(usuario, senha){
-        $http({
-            method: 'GET',
-            url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=login-entregador&email='+usuario+'&senha='+senha
-        }).then(function successCallback(response) {
-            // this callback will be called asynchronously
-            // when the response is available
-            if(controleError.checkError(response)){
-                $rootScope.entregador_id = response.data.id;
-                $rootScope.nome_entregador = response.data.nome;
+// .controller('loginCtrl', ['$scope', '$stateParams', '$http', '$rootScope', '$ionicPopup', '$location', 'controleError', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+// // You can include any angular dependencies as parameters for this function
+// // TIP: Access Route Parameters for your page via $stateParams.parameterName
+// function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, controleError) {
+//     if($rootScope.entregador_id&&$rootScope.entregador_id!=''){
+//         $location.path('/menu/aguardando');
+//     }
+//     $scope.acessoLogin = function(usuario, senha){
+//         $http({
+//             method: 'GET',
+//             url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=login-entregador&email='+usuario+'&senha='+senha
+//         }).then(function successCallback(response) {
+//             // this callback will be called asynchronously
+//             // when the response is available
+//             if(controleError.checkError(response)){
+//                 $rootScope.entregador_id = response.data.id;
+//                 $rootScope.nome_entregador = response.data.nome;
                 
-                $location.path('/menu/aguardando');
-            }
-          }, function errorCallback(response) {
-            // called asynchronously if an error occurs
-            // or server returns response with an error status.
-          });
-    }
+//                 $location.path('/menu/aguardando');
+//             }
+//           }, function errorCallback(response) {
+//             // called asynchronously if an error occurs
+//             // or server returns response with an error status.
+//           });
+//     }
 
-}])
+// }])
    
 .controller('entregarParaOClienteCtrl', ['$scope', '$stateParams', 'controleError', '$http', '$location', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
