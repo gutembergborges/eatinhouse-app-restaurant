@@ -123,6 +123,19 @@ angular.module('app.routes', [])
     }
   })
 
+        .state('menu.ordemListaGenerica', {
+    url: '/ordem-lista-generica',
+    params: {
+      id: ""    
+    },
+    views: {
+      'side-menu21': {
+        templateUrl: 'pages/ordemListaGenerica/ordemListaGenerica.html',
+        controller: 'ordemListaGenericaCtrl'
+      }
+    }
+  })
+
     .state('menu.ordemDetalhe', {
     url: '/ordem-detalhe',
     params: {
@@ -132,6 +145,19 @@ angular.module('app.routes', [])
       'side-menu21': {
         templateUrl: 'pages/ordemDetalhe/ordemDetalhe.html',
         controller: 'ordemDetalheCtrl'
+      }
+    }
+  })
+
+   .state('menu.ordemInformacoes', {
+    url: '/ordem-informacoes',
+    params: {
+      id: ""    
+    },
+    views: {
+      'side-menu21': {
+        templateUrl: 'pages/ordemInformacoes/ordemInformacoes.html',
+        controller: 'ordemInformacoesCtrl'
       }
     }
   })

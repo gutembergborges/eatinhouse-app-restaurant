@@ -247,14 +247,14 @@ function ($scope, $http, $stateParams, $location, controleError, uiGmapGoogleMap
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, sideMenuService, controleError, loginService, $cordovaGeolocation, $cordovaMedia) {
     
-    $rootScope.online = $rootScope.online&&$rootScope.online!=''?$rootScope.online:0;
+    // $rootScope.online = $rootScope.online&&$rootScope.online!=''?$rootScope.online:0;
     
     $scope.lat = "-19.9178164";
     $scope.lng = "-44.1003978";
     
-    if(loginService.checkLogin()){
-        $location.path('/login');
-    }
+    // if(loginService.checkLogin()){
+    //     $location.path('/login');
+    // }
 
     var options = {timeout: 10000, enableHighAccuracy: true};
      
@@ -323,7 +323,7 @@ function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, sideM
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, $rootScope, $location) {
     
-    $scope.nome_entregador = $rootScope.nome_entregador;
+    $scope.nome_entregador = localStorage.getItem('nome');
 
     $scope.logout = function(){
         $rootScope.entregador_id = null;

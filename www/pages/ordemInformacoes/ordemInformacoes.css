@@ -1,0 +1,9 @@
+#ordem-informacoes .icon-barra{
+
+	position: absolute;
+    z-index: 3;
+    right: 13px;
+    font-size: 35px;
+    top: 20px;
+
+}

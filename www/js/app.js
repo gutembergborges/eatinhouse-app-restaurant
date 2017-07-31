@@ -13,7 +13,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
 
 })
 
-.run(function($ionicPlatform,$rootScope,$timeout,Config,Util,$http) {
+.run(function($ionicPlatform,$rootScope,$timeout,Config,Util,$http,$state) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -35,8 +35,11 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
       method: 'GET',
       url: `${Util.url}notificacao/auto-search/empresa_id/${localStorage.getItem('token')}`
     }).then(function successCallback(response) {
-      console.log(response);
-      $rootScope.notificacaoNaoLido = response.data.notificacaoNaoLido;
+      // console.log(response);
+      $rootScope.notificacaoNaoLida = response.data.notificacaoNaoLida;
+      $rootScope.ordensAceitas = response.data.ordensAceitas;
+      $rootScope.ordensDespachadas = response.data.ordensDespachadas;
+      $rootScope.ordensCanceladas = response.data.ordensCanceladas;
       // console.log(response.data.notificacao);
       if(response.data.notificacao != null){ // se n�o for vazio
         Lobibox.notify(response.data.notificacao.tipo, {
@@ -45,7 +48,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
           // img:  $rootScope.patches.pathThumbMobile + usuariomsg.fotorosto, //path to image
           // msg:  usuariomsg.primeironome + $msgFavorito ,
           icon: 'icon ion-ios-information-outline',
-          title: response.data.notificacao.titulo ,
+          title: response.data.notificacao.msg ,
           msg: response.data.notificacao.texto ,
           size: 'normal',
           delay: Config.delayNotificacao,  //In milliseconds
@@ -54,7 +57,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
           // sound: $sound ,
           position: "top",
           onClick: function(){
-            $state.go('menu.detalheNotificacoes', {id: response.data.notificacao.id});
+            $state.go('menu.ordemDetalhe', {id: response.data.ordem.id});
           }
             //, 
             //onClick: function(){

@@ -54,6 +54,6 @@ angular.module('app.services', [])
 
 .service('Config', [function(){
     this.timerNotificacao = 3000; // Intervalo entre as requisições
-    this.delayNotificacao = 6500; // Tempo que a notificação fica disponível
+    this.delayNotificacao = 80000; // Tempo que a notificação fica disponível
     this.enabledNotification = true;
 }]);

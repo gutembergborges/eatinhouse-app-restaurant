@@ -4,12 +4,12 @@
       
       <div class="spacer" style="width: 0px; height: 14px;"></div>
          <ion-col class="row">
-          <ion-col class="col col-100" ui-sref="menu.listaNotificacoes">
-            <p style="background: #a53390; color: #fff; padding: 10px">
+          <ion-col class="col col-100"  ui-sref="menu.ordemListaGenerica({'id':0})">
+            <p style="background: rgba(51, 51, 51, 0.55); color: #fff; padding: 10px">
               <span style="display: block; font-size: 18px;line-height: 50px">
-                <ion-icon style="font-size: 19px;" class="fa fa-bell"></ion-icon> 15 New Orders
+                <ion-icon style="font-size: 19px;" class="fa fa-bell"></ion-icon> {{notificacaoNaoLida}} New orders
                 <ion >
-                  <i style="float:right; color: rgba(255,255,255,0.5); font-size: 39px;" class="icon ion-android-add-circle"></i>
+                  <i style="float:right; color: rgba(255,255,255,0.5); font-size: 39px;" class="icon ion-load-a"></i>
                 </ion>
               </span>
              
@@ -17,12 +17,12 @@
           </ion-col>
         </ion-col>
         <ion-col class="row">
-          <ion-col class="col col-100" ui-sref="menu.listaNotificacoes">
-            <p style="background: #33CD5F; color: #fff; padding: 10px">
+          <ion-col class="col col-100" ui-sref="menu.ordemListaGenerica({'id':1})" >
+            <p style="background: rgba(51, 51, 51, 0.55); color: #fff; padding: 10px">
               <span style="display: block; font-size: 18px;line-height: 50px">
-                <ion-icon style="font-size: 19px;" class="fa fa-bell"></ion-icon> 15 Order Accepted
+                <ion-icon style="font-size: 19px;" class="fa fa-bell"></ion-icon> {{ordensAceitas}} Accepted orders
                 <ion >
-                  <i style="float:right; color: rgba(255,255,255,0.5); font-size: 39px;" class="icon ion-android-add-circle"></i>
+                  <i style="float:right; color: rgba(255,255,255,0.5); font-size: 39px;" class="icon ion-checkmark-round"></i>
                 </ion>
               </span>
              
@@ -30,13 +30,27 @@
           </ion-col>
         </ion-col>
         <ion-col class="row">
-          <ion-col class="col col-100" ui-sref="menu.listaNotificacoes">
-            <p style="background: #387EF5; color: #fff; padding: 10px">
+          <ion-col class="col col-100" ui-sref="menu.ordemListaGenerica({'id':2})" >
+            <p style="background: rgba(51, 51, 51, 0.55); color: #fff; padding: 10px">
               <span style="display: block; font-size: 18px;line-height: 50px">
-                <ion-icon style="font-size: 19px;" class="fa fa-bell"></ion-icon> 15 Order sent
+                <ion-icon style="font-size: 19px;" class="fa fa-bell"></ion-icon> {{ordensDespachadas}} Sent orders
 
                 <ion >
-                  <i style="float:right; color: rgba(255,255,255,0.5); font-size: 39px;" class="icon ion-android-add-circle"></i>
+                  <i style="float:right; color: rgba(255,255,255,0.5); font-size: 39px;" class="icon ion-paper-airplane"></i>
+                </ion>
+              </span>
+             
+            </p>
+          </ion-col>
+        </ion-col>
+        <ion-col class="row">
+          <ion-col class="col col-100" ui-sref="menu.ordemListaGenerica({'id':4})" >
+            <p style="background: rgba(51, 51, 51, 0.55); color: #fff; padding: 10px">
+              <span style="display: block; font-size: 18px;line-height: 50px">
+                <ion-icon style="font-size: 19px;" class="fa fa-bell"></ion-icon> {{ordensCanceladas}} Cancel orders
+
+                <ion >
+                  <i style="float:right; color: rgba(255,255,255,0.5); font-size: 39px;" class="icon ion-close-round"></i>
                 </ion>
               </span>
              

@@ -52,6 +52,7 @@ function ($scope, $stateParams,$ionicPopup,$http,$location,$ionicHistory,$state,
           $ionicHistory.clearHistory();
   
           localStorage.setItem('token',data.token);
+
           
           if(lembrar){
             localStorage.setItem('lembrar',lembrar)
@@ -74,17 +75,18 @@ function ($scope, $stateParams,$ionicPopup,$http,$location,$ionicHistory,$state,
             localStorage.setItem('plano',data.plano);
             localStorage.setItem('tipo_usuario',data.tipo_usuario);
             console.log("tiririca121")
-            // $http.get(`${Util.url}/api/perfil/localStorage.getItem('token')`)
-            //   .success(function(response){
-            //     console.log(response);
-            //      $rootScope.nome = response.data.nome;
-            //     localStorage.setItem('nome',response.data.nome);
+            let token = localStorage.getItem('token');
+            $http.get(`${Util.url}perfilempresa/${token}`)
+              .success(function(response){
+                console.log(response);
+                 $rootScope.nome = response.data.nome;
+                localStorage.setItem('nome',response.data.nome);
 
-            //   })
-            //   .error(function(err)
-            //   {
+              })
+              .error(function(err)
+              {
 
-            //   });
+              });
 
 
 
