@@ -1,0 +1,139 @@
+<ion-view title="New order" id="ordem-cadastro">
+  <ion-content padding="true"  class="has-header">
+
+    <div class="accordion-container">
+  <h2>New job</h2>
+  <div class="set">
+    <a href="javascript: void(0)">
+      <div class='status_passo'>
+        <i class="icon ion-alert-circled validacao-pendente" ng-show="!passo1"></i>
+        <i class="icon ion-checkmark validacao-concluida" ng-show="passo1"></i>
+      </div>
+      Customer 
+      <i class="icon ion-plus situacao"></i>
+    </a>
+    <div class="content">      
+      <label class="item item-input" id="cadastrarContato-textarea6" name="nome">
+        <span class="input-label">Name</span>
+        <input type='text' ng-model="formData.passo1.nome" ng-blur="validacaoPasso('passo1')">
+      </label>
+      <div class="spacer" style="width: 300px; height: 6px;"></div>
+      <label class="item item-input" id="cadastrarContato-textarea7" name="telefone">
+        <span class="input-label">Phone</span>
+        <input type="text"  ng-model="formData.passo1.telefone" ng-blur="validacaoPasso('passo1')">
+      </label>
+      <div class="spacer" style="width: 300px; height: 6px;"></div>
+      <label class="item item-input" id="cadastrarContato-textarea7" name="email">
+        <span class="input-label">Email</span>
+        <input type="text"  ng-model="formData.passo1.email" ng-blur="validacaoPasso('passo1')">
+      </label>
+    </div>
+  </div>
+  <div class="set">
+    <a href="javascript: void(0)">
+      <div class='status_passo'>
+        <i class="icon ion-alert-circled validacao-pendente" ng-show="!passo2"></i>
+        <i class="icon ion-checkmark validacao-concluida" ng-show="passo2"></i>
+      </div>
+      Address 
+      <i class="icon ion-plus situacao"></i>
+    </a>
+    <div class="content">
+     <label class="item item-input" id="cadastrarContato-textarea6" name="nome">
+        <span class="input-label">Number</span>
+        <input type='text' ng-model="formData.passo2.numero" ng-blur="validacaoPasso('passo2')">
+      </label>
+      <div class="spacer" style="width: 300px; height: 6px;"></div>
+      <label class="item item-input" id="cadastrarContato-textarea6" name="nome">
+        <span class="input-label">Address</span>
+        <input type='text' ng-model="formData.passo2.logradouro" ng-blur="validacaoPasso('passo2')">
+      </label>
+      <div class="spacer" style="width: 300px; height: 6px;"></div>
+      <label class="item item-input" id="cadastrarContato-textarea6" name="nome">
+        <span class="input-label">City</span>
+        <input type='text' ng-model="formData.passo2.complemento" ng-blur="validacaoPasso('passo2')">
+      </label>
+      <div class="spacer" style="width: 300px; height: 6px;"></div>
+      <label class="item item-input" id="cadastrarContato-textarea6" name="nome">
+        <span class="input-label">Postcode</span>
+        <input type='text' ng-model="formData.passo2.cep" ng-blur="validacaoPasso('passo2')">
+      </label>
+      <div class="spacer" style="width: 300px; height: 6px;"></div>
+
+    </div>
+  </div>
+  <div class="set">
+    <a href="javascript: void(0)">
+      <div class='status_passo'>
+        <i class="icon ion-alert-circled validacao-pendente" ng-show="!passo3"></i>
+        <i class="icon ion-checkmark validacao-concluida" ng-show="passo3"></i>
+      </div>
+      Reference 
+      <i class="icon ion-plus situacao"></i>
+    </a>
+    <div class="content">
+       <label class="item item-input" id="cadastrarContato-textarea6" name="nome">        
+        <textarea rows="4" ng-model="formData.passo3.referencia" ng-blur="validacaoPasso('passo3')"></textarea>
+      </label>
+    </div>
+  </div>
+  <div class="set">
+    <a href="javascript: void(0)">
+      <div class='status_passo'>
+        <i class="icon ion-alert-circled validacao-pendente" ng-show="!passo4"></i>
+        <i class="icon ion-checkmark validacao-concluida" ng-show="passo4"></i>
+      </div>
+      Instructions 
+      <i class="icon ion-plus situacao"></i> 
+    </a>
+    <div class="content">
+     <label class="item item-input" id="cadastrarContato-textarea6" name="nome">        
+        <textarea rows="4" ng-model="formData.passo4.instrucao" ng-blur="validacaoPasso('passo4')" ></textarea>
+      </label>
+    </div>
+  </div>
+   <div class="set">
+    <a href="javascript: void(0)">
+      <div class='status_passo'>
+        <i class="icon ion-alert-circled validacao-pendente" ng-show="!passo5"></i>
+        <i class="icon ion-checkmark validacao-concluida" ng-show="passo5"></i>
+      </div>
+      Items 
+      <i class="icon ion-plus situacao"></i> 
+    </a>
+    <div class="content">
+      <label class="item item-input" id="cadastrarContato-textarea6" name="nome">
+        <span class="input-label">Qtd</span>
+        <input type='text' ng-model="formData.passo5.qtd" ng-blur="validacaoPasso('passo5')">
+      </label>
+      <div class="spacer" style="width: 300px; height: 6px;"></div>
+       <label class="item item-input" id="cadastrarContato-textarea6" name="nome">
+        <span class="input-label">Product</span>
+        <input type='text' ng-model="formData.passo5.produto" ng-blur="validacaoPasso('passo5')">
+      </label>
+      <div class="spacer" style="width: 300px; height: 6px;"></div>
+        <label class="item item-input" id="cadastrarContato-textarea6" name="nome">
+        <span class="input-label">Price</span>
+        <input type='text' ng-model="formData.passo5.preco" ng-blur="validacaoPasso('passo5')">
+      </label>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+   
+     
+ 
+
+   <!--  <div>
+      <img src="img/EWzTBuhXTN6eOBJvfhat_3-estrelas.jpg" style="display: block; width: 50%; height: auto; margin-left: auto; margin-right: auto;">
+    </div> -->
+    <center><a  style="width: 42%;" id="cadastrarContato-button13" ng-click="salvarPedido()" class="button button-black button-block">Salvar</a></center>
+  </ion-content>
+</ion-view>

@@ -136,6 +136,25 @@ angular.module('app.routes', [])
     }
   })
 
+        .state('menu.ordemExtraLista', {
+    url: '/ordem-extra-lista',
+    views: {
+      'side-menu21': {
+        templateUrl: 'pages/ordemExtraLista/ordemExtraLista.html',
+        controller: 'ordemListaExtraCtrl'
+      }
+    }
+  })
+        .state('menu.ordemExtraCadastro', {
+    url: '/ordem-extra-cadastro',
+    views: {
+      'side-menu21': {
+        templateUrl: 'pages/ordemExtraCadastro/ordemExtraCadastro.html',
+        controller: 'ordemExtraCadastroCtrl'
+      }
+    }
+  })
+
     .state('menu.ordemDetalhe', {
     url: '/ordem-detalhe',
     params: {

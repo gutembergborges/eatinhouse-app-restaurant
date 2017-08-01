@@ -1,0 +1,71 @@
+
+#ordem-cadastro .accordion-container{
+  position: relative;
+  /*width: 500px;*/
+  height: auto;
+  margin: 20px auto;
+}
+#ordem-cadastro .accordion-container > h2{
+  text-align: center;
+  /*color: #fff;*/
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+}
+#ordem-cadastro .set{
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+}
+#ordem-cadastro .set > a{
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  -webkit-transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  transition:all 0.2s linear;
+}
+#ordem-cadastro .set > a i{
+  position:relative;
+  float: right;
+  margin-top:4px;
+  color: #666;
+}
+#ordem-cadastro .set > a.active{
+  background-color:#444444;
+  color: #fff;
+}
+#ordem-cadastro .set > a.active i{
+  color: #fff;
+}
+#ordem-cadastro .content{
+  position:relative;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  display:none;
+}
+#ordem-cadastro .content p{
+  padding: 10px 15px;
+  margin: 0;
+  color: #333;
+}
+
+#ordem-cadastro .status_passo{
+  float: left;
+  margin-right: 10px;
+  margin-top: -4px;
+}
+
+#ordem-cadastro .validacao-pendente{
+  color: #387ef5 !important;
+}
+
+#ordem-cadastro .validacao-concluida{
+  color: #33cd5f !important;
+}
