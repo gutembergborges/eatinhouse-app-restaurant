@@ -155,6 +155,32 @@ angular.module('app.routes', [])
     }
   })
 
+      .state('menu.ordemExtraDetalhe', {
+    url: '/ordem-extra-detalhe',
+    params: {
+      id: ""    
+    },
+    views: {
+      'side-menu21': {
+        templateUrl: 'pages/ordemExtraDetalhe/ordemExtraDetalhe.html',
+        controller: 'ordemExtraDetalheCtrl'
+      }
+    }
+  })
+
+   .state('menu.ordemExtraInformacoes', {
+    url: '/ordem-extra-informacoes',
+    params: {
+      id: ""    
+    },
+    views: {
+      'side-menu21': {
+        templateUrl: 'pages/ordemExtraInformacoes/ordemExtraInformacoes.html',
+        controller: 'ordemExtraInformacoesCtrl'
+      }
+    }
+  })
+
     .state('menu.ordemDetalhe', {
     url: '/ordem-detalhe',
     params: {

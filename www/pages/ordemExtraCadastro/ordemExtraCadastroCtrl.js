@@ -81,8 +81,8 @@ function ($scope, $stateParams, $http, $state,$ionicPopup,Util,$httpParamSeriali
                     }
               }).then(function successCallback(response) {
               var alertPopup = $ionicPopup.alert({
-                title: 'Parabéns',
-                template: 'Sua reunião foi cadastrada!'
+                title: 'Success',
+                template: 'Extra order registered'
               })
 
               // $state.go('menu.agenda');
@@ -90,7 +90,7 @@ function ($scope, $stateParams, $http, $state,$ionicPopup,Util,$httpParamSeriali
       }else{
         $ionicPopup.alert({
           title: 'Ops',
-          template: 'preencha com todas infos!'
+          template: 'Fill in all the information!'
         })
       }
     

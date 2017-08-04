@@ -247,74 +247,74 @@ function ($scope, $http, $stateParams, $location, controleError, uiGmapGoogleMap
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, sideMenuService, controleError, loginService, $cordovaGeolocation, $cordovaMedia) {
     
-    // $rootScope.online = $rootScope.online&&$rootScope.online!=''?$rootScope.online:0;
+    // // $rootScope.online = $rootScope.online&&$rootScope.online!=''?$rootScope.online:0;
     
-    $scope.lat = "-19.9178164";
-    $scope.lng = "-44.1003978";
+    // $scope.lat = "-19.9178164";
+    // $scope.lng = "-44.1003978";
     
-    // if(loginService.checkLogin()){
-    //     $location.path('/login');
-    // }
+    // // if(loginService.checkLogin()){
+    // //     $location.path('/login');
+    // // }
 
-    var options = {timeout: 10000, enableHighAccuracy: true};
+    // var options = {timeout: 10000, enableHighAccuracy: true};
      
-    $cordovaGeolocation.getCurrentPosition(options).then(function(position) {
-        $scope.lat = position.coords.latitude;
-        $scope.lng = position.coords.longitude;
-        console.log(position);
-      }, function(error){
-        console.log("Could not get location. Error:");
-        console.log(error);
-    });
+    // $cordovaGeolocation.getCurrentPosition(options).then(function(position) {
+    //     $scope.lat = position.coords.latitude;
+    //     $scope.lng = position.coords.longitude;
+    //     console.log(position);
+    //   }, function(error){
+    //     console.log("Could not get location. Error:");
+    //     console.log(error);
+    // });
 
-    $scope.openSideMenu = function(){
-        // sideMenuService.openSideMenu();
-    };
-    $scope.changeOnline = function(){
-        if($rootScope.online===0){
-            $rootScope.online = 1;
-        }else{
-            $rootScope.online = 0;
-        }
-        console.log($rootScope.online);
-    };
-    $scope.online = $rootScope.online;
-    $scope.ultima_atualizacao = "...";
+    // $scope.openSideMenu = function(){
+    //     // sideMenuService.openSideMenu();
+    // };
+    // $scope.changeOnline = function(){
+    //     if($rootScope.online===0){
+    //         $rootScope.online = 1;
+    //     }else{
+    //         $rootScope.online = 0;
+    //     }
+    //     console.log($rootScope.online);
+    // };
+    // $scope.online = $rootScope.online;
+    // $scope.ultima_atualizacao = "...";
     
-    $scope.checkPedido = function(){
-        if($rootScope.online==1){
-            $http({
-                method: 'GET',
-                url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=pedido-pendente&entregador_id='+$rootScope.entregador_id
-            }).then(function successCallback(response) {
-                // this callback will be called asynchronously
-                // when the response is available
-                if(controleError.checkError(response)){
+    // $scope.checkPedido = function(){
+    //     if($rootScope.online==1){
+    //         $http({
+    //             method: 'GET',
+    //             url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=pedido-pendente&entregador_id='+$rootScope.entregador_id
+    //         }).then(function successCallback(response) {
+    //             // this callback will be called asynchronously
+    //             // when the response is available
+    //             if(controleError.checkError(response)){
                     
-                    var data = new Date();          
-                    var hora = data.getHours();
-                    hora = hora<10?"0"+hora:hora;   
-                    var minuto = data.getMinutes();
-                    minuto = minuto<10?"0"+minuto:minuto;
-                    $scope.ultima_atualizacao = hora+":"+minuto;
+    //                 var data = new Date();          
+    //                 var hora = data.getHours();
+    //                 hora = hora<10?"0"+hora:hora;   
+    //                 var minuto = data.getMinutes();
+    //                 minuto = minuto<10?"0"+minuto:minuto;
+    //                 $scope.ultima_atualizacao = hora+":"+minuto;
                     
-                    if(response.data.venda_id&&response.data.venda_id!=''&&response.data.venda_id!=undefined){
-                        $rootScope.venda_id = response.data.venda_id;
-                        $location.path('/nova-ordem/'+response.data.venda_id);
-                    }else{
-                        setTimeout(function(){ $scope.checkPedido(); }, 5000);
-                    }
-                }
-              }, function errorCallback(response) {
-                // called asynchronously if an error occurs
-                // or server returns response with an error status.
-              });
-        }else{
-            setTimeout(function(){ $scope.checkPedido(); }, 5000);
-        }
-    }
+    //                 if(response.data.venda_id&&response.data.venda_id!=''&&response.data.venda_id!=undefined){
+    //                     $rootScope.venda_id = response.data.venda_id;
+    //                     $location.path('/nova-ordem/'+response.data.venda_id);
+    //                 }else{
+    //                     setTimeout(function(){ $scope.checkPedido(); }, 5000);
+    //                 }
+    //             }
+    //           }, function errorCallback(response) {
+    //             // called asynchronously if an error occurs
+    //             // or server returns response with an error status.
+    //           });
+    //     }else{
+    //         setTimeout(function(){ $scope.checkPedido(); }, 5000);
+    //     }
+    // }
     
-    $scope.checkPedido();
+    // $scope.checkPedido();
 
 }])
    

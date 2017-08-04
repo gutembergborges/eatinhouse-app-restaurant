@@ -1,6 +1,6 @@
 angular.module('app.controllers')
   
-.controller('ordemDetalheCtrl', ['$scope', '$stateParams', '$http', '$rootScope', '$ionicPopup', '$location', 'controleError','$state',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('ordemExtraDetalheCtrl', ['$scope', '$stateParams', '$http', '$rootScope', '$ionicPopup', '$location', 'controleError','$state',// The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, controleError,$state) {
@@ -8,27 +8,26 @@ function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, contr
 console.log($stateParams.id);
 
     $scope.id = $stateParams.id;
-    $scope.venda_total = 0;
-    $scope.valor_frete = 0;
-
+   
     const token = localStorage.getItem('token');
     const id =  $scope.id;
 
-        $http.get(`http://www.eatinhousedelivery.co.uk/api/restaurantepedidos/search/detalhe/pedido/${id}`)
+        $http.get(`http://www.eatinhousedelivery.co.uk/api/pedidoextra/detalhe/pedido/${id}`)
         .success(function(response){
-            console.log(response);                  
-            $scope.meusPedidosDetalhe = response;
-            $scope.valor_total = response.data.valortotal;
-            $scope.valor_frete = response.data.valorfrete;
-            $scope.status_restaurante = response.data.status_restaurante;
-            $scope.ordem = response.data.ordem;
+            console.log(response.data);                  
+            $scope.ordem = response.data.id;
+            $scope.qtd_produto = response.data.qtd;
+            $scope.nome_produto = response.data.produto;
+            // $scope.valor_frete = response.data.valorfrete;
+            // $scope.status_restaurante = response.data.status_restaurante;
+            
 
             
 
-            $scope.cep = response.data.endereco.cep;
-            $scope.complemento = response.data.endereco.complemento; 
-            $scope.logradouro = response.data.endereco.logradouro; 
-            $scope.numero = response.data.endereco.numero;                               
+            $scope.cep = response.data.cep;
+            $scope.complemento = response.data.complemento; 
+            $scope.logradouro = response.data.logradouro; 
+            $scope.numero = response.data.numero;                               
             
         })
 

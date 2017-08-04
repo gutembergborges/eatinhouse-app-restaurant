@@ -7,7 +7,7 @@
         <ion-list id="agendas-list8" >
         <!-- <i class="icon ion-navicon-round icon-barra" aria-hidden="true"  ng-click="showConfirm()" ></i> -->
 
-          <ion-item class="item " ng-repeat="pedido in listaDePedidos.data" id="agendas-list-item22" ui-sref="menu.ordemDetalhe({'id':pedido.id})">
+          <ion-item class="item " ng-repeat="pedido in listaDePedidos.data" id="agendas-list-item22" ui-sref="menu.ordemExtraDetalhe({'id':pedido.id})">
              <i ng-if="pedido.status_restaurante == 0" class="icon ion-load-a icon-barra" aria-hidden="true" ></i>
              <i ng-if="pedido.status_restaurante == 1" class="icon ion-checkmark-round icon-barra" aria-hidden="true" ></i>
              <i ng-if="pedido.status_restaurante == 2" class="icon ion-paper-airplane icon-barra" aria-hidden="true" ></i>

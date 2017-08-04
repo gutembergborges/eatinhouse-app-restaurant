@@ -23,7 +23,7 @@ function ($scope, $stateParams,$ionicPopup,$http,$location,$ionicHistory,$state,
       // lembrar = false;
     if(typeof(email) == "undefined" || typeof(senha) == "undefined"){
       var alertPopup = $ionicPopup.alert({
-        cssClass: 'my-custom-popup',
+       
         title: 'Usuario ou senha invalida',
         template: 'Tente novamente'
       });
@@ -37,9 +37,9 @@ function ($scope, $stateParams,$ionicPopup,$http,$location,$ionicHistory,$state,
           console.log(data.token)
  if(data.token == null || data.token == 'null'){
           var alertPopup = $ionicPopup.alert({
-            cssClass: 'my-custom-popup',
+           
             title: 'Try again',
-            template: 'Invalid username and / or password'
+            template: 'Invalid username and or password'
           });
 
 }else{
@@ -107,9 +107,9 @@ function ($scope, $stateParams,$ionicPopup,$http,$location,$ionicHistory,$state,
           localStorage.setItem('token','null');
           // console.log('www.querotransporte.acessovps.com.br'+'/api/login/'+btoa(email)+'.'+btoa(senha))
           var alertPopup = $ionicPopup.alert({
-            cssClass: 'my-custom-popup',
+           
             title: 'Try again',
-            template: 'Invalid username and / or password'
+            template: 'Invalid username and or password'
           });
         });
     }
@@ -117,8 +117,8 @@ function ($scope, $stateParams,$ionicPopup,$http,$location,$ionicHistory,$state,
   // An alert dialog
   $scope.showAlert = function() {
     var alertPopup = $ionicPopup.alert({
-      cssClass: 'my-custom-popup',
-      title: 'Invalid username and / or password',
+     
+      title: 'Invalid username and or password',
       template: 'Try again'
     });
     alertPopup.then(function(res) {

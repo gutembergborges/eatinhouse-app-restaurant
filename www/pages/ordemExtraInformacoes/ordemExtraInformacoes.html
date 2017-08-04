@@ -1,0 +1,107 @@
+<ion-view title="Order Information" cache-view="false" id="ordem-informacoes">
+
+    <ion-content padding="false"  class="has-header">
+
+    <div class="list">
+      <div class="item item-divider">
+        <center>Customer</center>
+      </div>
+
+      <div class="list" >
+      <div class="row">
+        <div class="col-25">
+        Name:
+        </div>
+        <div class="col-75">
+            <div style="font-size: 14px;font-weight: bolder;">{{nome}}</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+        Email:
+        </div>
+        <div class="col-75">
+            <div style="font-size: 14px;font-weight: bolder;">{{email}}</div>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-25">
+        Phone:
+        </div>
+        <div class="col-75">
+            <div style="font-size: 14px;font-weight: bolder;">{{telefone}}</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+        Address:
+        </div>
+        <div class="col-75">
+            <div style="font-size: 14px;font-weight: bolder;">{{numero}},{{logradouro}},{{cep}},{{complemento}}</div>
+        </div>
+      </div>
+     
+      </div>
+
+      
+    </div>
+
+    <div class="list">
+      <div class="item item-divider">
+        <center>Driver</center>
+      </div>
+
+      <div class="list" ng-if="entregador == 1">
+      <div class="row">
+        <div class="col-25">
+        Name:
+        </div>
+        <div class="col-75">
+            <div style="font-size: 14px;font-weight: bolder;">{{nome_entreagdor}}</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+        Phone:
+        </div>
+        <div class="col-75">
+            <div style="font-size: 14px;font-weight: bolder;">{{telefone_entreagdor}}</div>
+        </div>
+      </div>
+      </div>
+
+       <div class="list" ng-if="entregador == 0">
+      <div class="row">
+        <div class="col-100">
+        <span>{{mensagem}}</span>
+        </div>
+        
+      </div>
+     
+      </div>
+
+      
+    </div>
+
+
+         
+    
+  </ion-content>
+<!--   <ion-footer-bar align-title="left" class="bar-dark">
+  <div class="buttons">
+    <button class="button">Left Button</button>
+  </div>
+  <h1 class="title">Title!</h1>
+  <div class="buttons" ng-click="doSomething()">
+    <button class="button">Right Button</button>
+  </div>
+</ion-footer-bar> -->
+<ion-footer-bar  class="bar-dark icones" style="display: flex;flex-wrap: wrap;justify-content: space-around;justify-content: baseline;">
+  
+   <button  ng-click="ordemCancelada()" class="button button-assertive" style="width: 100%;">Cancel order</button>
+   
+  
+  
+  
+</ion-footer-bar>
+</ion-view>
