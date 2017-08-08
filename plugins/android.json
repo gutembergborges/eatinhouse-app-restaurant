@@ -8,30 +8,30 @@
     },
     "installed_plugins": {
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
         },
         "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondres"
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
         }
     }
 }

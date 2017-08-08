@@ -67,7 +67,7 @@ function ($scope, $stateParams, $http, $state,$ionicPopup,Util,$httpParamSeriali
     //SALVANDO A ORDEM EXTRA
 
      $scope.salvarPedido = function(){
-      if($scope.confirmaValidacao()){
+      // if($scope.confirmaValidacao()){
         formulario = $scope.reajusteFormData($scope.formData);
         console.log(formulario);
         formulario.token = localStorage.getItem('token');
@@ -87,12 +87,12 @@ function ($scope, $stateParams, $http, $state,$ionicPopup,Util,$httpParamSeriali
 
               // $state.go('menu.agenda');
               });       
-      }else{
-        $ionicPopup.alert({
-          title: 'Ops',
-          template: 'Fill in all the information!'
-        })
-      }
+      // }else{
+      //   $ionicPopup.alert({
+      //     title: 'Ops',
+      //     template: 'Fill in all the information!'
+      //   })
+      // }
     
     }
 
