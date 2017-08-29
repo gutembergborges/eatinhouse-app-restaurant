@@ -35,6 +35,9 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
       method: 'GET',
       url: `${Util.url}notificacao/auto-search/empresa_id/${localStorage.getItem('token')}`
     }).then(function successCallback(response) {
+
+
+
       // console.log(response);
       $rootScope.notificacaoNaoLida = response.data.notificacaoNaoLida;
       $rootScope.ordensAceitas = response.data.ordensAceitas;
@@ -65,6 +68,39 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
             //    alert('Abro agora a combinacao pendente  para esse nego  id= ' + usuariomsg.idusuario);
             // } 
         });
+
+            // Play audio
+    var my_media;
+        
+    // // Play the audio file at url
+    my_media = new Media('http://www.eatinhousedelivery.com/audio/song.mp3',
+        // success callback
+        function () {
+            console.log("playAudio():Audio Success");
+        },
+        // error callback
+        function (err) {
+            console.log("playAudio():Audio Error: " + err);
+        },
+        // loop callback
+        function (status) {
+            // if(status === Media.MEDIA_STOPPED) {
+            //     my_media.seekTo(0);
+            //     if($scope.played < 1)
+            //       my_media.play();
+
+            //     $scope.played++;
+            // }
+        }
+    );
+
+    // // Play audio
+    my_media.play({ numberOfLoops: 6 });
+
+    // my_media.status.subscribe((status) => {
+    //   if(status === Media.MEDIA_STOPPED) my_media.play();
+    // });
+
       }
     });
   }
