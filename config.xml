@@ -1,11 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk" version="0.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk" version="1.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Eat in House Restaurants Partner</name>
-    <description>        
-The app is to manage the restaurant control deliveries, accepting and calling the driver.
+    <description>        
+
+The app is to manage the restaurant control deliveries, accepting and calling the driver.
+
     </description>
-    <author email="sistemas@acessoweb.com" href="http://acessoweb.com/">
-      ACESSOWEB DESIGN
+    <author email="sistemas@acessoweb.com" href="http://acessoweb.com/">
+
+      ACESSOWEB DESIGN
+
     </author>
     <content src="index.html" />
     <access launch-external="yes" origin="tel:*" />
