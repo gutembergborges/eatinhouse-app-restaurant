@@ -16,6 +16,9 @@
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
         },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
+        },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
         },
@@ -26,9 +29,6 @@
             "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
-        },
-        "cordova-plugin-media": {
             "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
         }
     },
