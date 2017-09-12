@@ -79,8 +79,9 @@ function ($scope, $stateParams,$ionicPopup,$http,$location,$ionicHistory,$state,
             $http.get(`${Util.url}perfilempresa/${token}`)
               .success(function(response){
                 console.log(response);
-                 $rootScope.nome = response.data.nome;
-                localStorage.setItem('nome',response.data.nome);
+                $rootScope.nome_restaurante = response.data.nome;
+                localStorage.setItem('nome_restaurante',response.data.nome);
+                $state.go('menu.aguardando');
 
               })
               .error(function(err)
@@ -90,7 +91,6 @@ function ($scope, $stateParams,$ionicPopup,$http,$location,$ionicHistory,$state,
 
 
 
-            $state.go('menu.aguardando');
          
           
           

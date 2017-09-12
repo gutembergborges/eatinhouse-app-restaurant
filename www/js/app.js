@@ -27,7 +27,10 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
     }
   });
 
-
+  if(localStorage.getItem('nome_restaurante')!=''){
+    $rootScope.nome_restaurante = localStorage.getItem('nome_restaurante');
+    
+  }
     $rootScope.notificacaoNaoLido = 0;
   function refreshNotification(){
     // let token = localStorage.getItem('token');
