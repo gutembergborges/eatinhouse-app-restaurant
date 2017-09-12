@@ -30,6 +30,9 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
+        },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.acessoweb.eatinhousedeliverydrivelondresrestaurantuk"
         }
     },
     "dependent_plugins": {

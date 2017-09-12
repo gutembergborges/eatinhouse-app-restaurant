@@ -27,6 +27,11 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
     }
   });
 
+  document.addEventListener('deviceready', function () {
+    // cordova.plugins.backgroundMode is now available
+    cordova.plugins.backgroundMode.setEnabled(true);
+  }, false);
+
   if(localStorage.getItem('nome_restaurante')!=''){
     $rootScope.nome_restaurante = localStorage.getItem('nome_restaurante');
     
