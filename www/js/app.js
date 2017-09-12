@@ -13,7 +13,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
 
 })
 
-.run(function($ionicPlatform,$rootScope,$timeout,Config,Util,$http,$state) {
+.run(function($ionicPlatform,$rootScope,$timeout,Config,Util,$http,$state, $ionicPopup, $ionicHistory) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -25,6 +25,40 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+
+
+    $ionicPlatform.registerBackButtonAction(function(e) {
+     e.preventDefault();
+     function showConfirm() {
+      var confirmPopup = $ionicPopup.show({
+       title : 'Exit?',
+       template : 'Are you sure you want to exit?',
+       buttons : [{
+        text : 'Cancel',
+        type : 'button-royal button-outline',
+       }, {
+        text : 'Ok',
+        type : 'button-royal',
+        onTap : function() {
+         ionic.Platform.exitApp();
+        }
+       }]
+      });
+     };
+
+     // Is there a page to go back to?
+     if ($ionicHistory.backView()) {
+      // Go back in history
+      $ionicHistory.backView().go();
+     } else {
+      // This is the last page: Show confirmation popup
+      showConfirm();
+     }
+
+     return false;
+    }, 101);
+
   });
 
   document.addEventListener('deviceready', function () {
@@ -105,6 +139,10 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
     // // Play audio
     my_media.play({ numberOfLoops: 6 });
 
+
+    $rootScope.$on('$stateChangeStart', function (e) {
+      my_media.stop();
+    });
     // my_media.status.subscribe((status) => {
     //   if(status === Media.MEDIA_STOPPED) my_media.play();
     // });

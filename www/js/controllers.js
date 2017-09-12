@@ -242,11 +242,13 @@ function ($scope, $http, $stateParams, $location, controleError, uiGmapGoogleMap
     }
 }])
    
-.controller('aguardandoCtrl', ['$scope', '$stateParams', '$http', '$rootScope', '$ionicPopup', '$location', 'sideMenuService', 'controleError', 'loginService', '$cordovaGeolocation', '$cordovaMedia', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('aguardandoCtrl', ['$scope', '$stateParams', '$http', '$rootScope', '$ionicPopup', '$location', 'sideMenuService', 'controleError', 'loginService', '$cordovaGeolocation', '$cordovaMedia', '$ionicHistory',
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, sideMenuService, controleError, loginService, $cordovaGeolocation, $cordovaMedia) {
+function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, sideMenuService, controleError, loginService, $cordovaGeolocation, $cordovaMedia, $ionicHistory) {
     
+    $ionicHistory.clearHistory();
+    $ionicHistory.clearCache();
     // // $rootScope.online = $rootScope.online&&$rootScope.online!=''?$rootScope.online:0;
     
     // $scope.lat = "-19.9178164";

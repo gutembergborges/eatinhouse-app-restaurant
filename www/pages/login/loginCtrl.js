@@ -10,7 +10,7 @@ function ($scope, $stateParams,$ionicPopup,$http,$location,$ionicHistory,$state,
     $scope.lembrarinput = localStorage.getItem('lembrar');
   }
   if(localStorage.getItem('token')!=''){
-    $location.path('/side-menu21/dashboard');
+    $location.path('/side-menu21/aguardando');
   }
   // console.log(localStorage.getItem('lembrar'));
   $scope.update = function(email,senha, lembrar){
@@ -54,11 +54,11 @@ function ($scope, $stateParams,$ionicPopup,$http,$location,$ionicHistory,$state,
           localStorage.setItem('token',data.token);
 
           
-          if(lembrar){
+          // if(lembrar){
             localStorage.setItem('lembrar',lembrar)
             localStorage.setItem('email',email);
             localStorage.setItem('senha',senha);
-          }
+          // }
           $scope.data = data;
           console.log('AQUI =>'+$scope.data.tipo_usuario);
           $ionicHistory.nextViewOptions({
