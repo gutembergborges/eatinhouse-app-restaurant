@@ -23,10 +23,10 @@ function ($scope, $stateParams, $http, $state,$ionicPopup,Util,$httpParamSeriali
 
     $scope.validacaoPasso = function(passo){
       var status = true;
-      angular.forEach($scope.formData[passo], function(value, key) {
-        if(value=="" || typeof(value) == "undefined")
-          status = false;
-      })
+      // angular.forEach($scope.formData[passo], function(value, key) {
+      //   if(value=="" || typeof(value) == "undefined")
+      //     status = false;
+      // })
       $scope[passo] = status;
     }
 
@@ -82,10 +82,10 @@ function ($scope, $stateParams, $http, $state,$ionicPopup,Util,$httpParamSeriali
               }).then(function successCallback(response) {
               var alertPopup = $ionicPopup.alert({
                 title: 'Success',
-                template: 'Extra order registered'
+                template: 'Driver on way'
               })
 
-              // $state.go('menu.agenda');
+              $state.go('menu.ordemExtraLista');
               });       
       // }else{
       //   $ionicPopup.alert({

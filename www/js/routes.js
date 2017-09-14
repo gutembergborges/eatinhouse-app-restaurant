@@ -145,8 +145,9 @@ angular.module('app.routes', [])
       }
     }
   })
-        .state('menu.ordemExtraCadastro', {
+        .state('menu.ordemExtraCadastro', {         
     url: '/ordem-extra-cadastro',
+     cache: false,
     views: {
       'side-menu21': {
         templateUrl: 'pages/ordemExtraCadastro/ordemExtraCadastro.html',
