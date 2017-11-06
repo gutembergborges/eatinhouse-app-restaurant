@@ -11,8 +11,8 @@ function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, contr
 
 
  function atualizaLista(){
-     let token = localStorage.getItem('token');
-    $http.get(`${Util.url}restaurantepedidos/search/list/empresa_id/${token}`)
+    var token = localStorage.getItem('token');
+    $http.get(Util.url+'restaurantepedidos/search/list/empresa_id/'+token)
         .success(function(response){
             console.log(response);
             $scope.listaDePedidos = response;                  
@@ -46,7 +46,7 @@ function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, contr
                 buttons: [
                 {
                     text: 'Aceito',
-                    type: `${$scope.reuniao_button}`,
+                    type: $scope.reuniao_button,
                     onTap: function(e) {
                       
 
@@ -58,8 +58,8 @@ function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, contr
                 }
                 ,
                 {
-                    text: `Preparação`,
-                    type: `${$scope.cadastro_button}`,
+                    text: 'Preparação',
+                    type: $scope.cadastro_button,
                     onTap: function(e) {
                         
                   
@@ -69,8 +69,8 @@ function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, contr
                    }
                },
                {
-                    text: `Pronto`,
-                    type: `${$scope.reuniao_cancelada_button}`,
+                    text: 'Pronto',
+                    type: $scope.reuniao_cancelada_button,
                     onTap: function(e) {                        
                         
 

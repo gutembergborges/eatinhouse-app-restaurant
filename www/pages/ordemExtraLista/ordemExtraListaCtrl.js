@@ -11,8 +11,8 @@ function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, contr
 
 
  function atualizaLista(){
-     let token = localStorage.getItem('token');
-    $http.get(`${Util.url}pedidoextra/list/${token}`)
+    var token = localStorage.getItem('token');
+    $http.get(Util.url+'pedidoextra/list/'+token)
         .success(function(response){
             console.log(response);
             $scope.listaDePedidos = response;                  

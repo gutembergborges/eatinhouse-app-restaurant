@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services','uiGmapgoogle-maps','googlemaps.init','firebase','firebaseConfig','ngCordova',])
 
-.config(function($ionicConfigProvider, $sceDelegateProvider,){
+.config(function($ionicConfigProvider, $sceDelegateProvider){
 
   $sceDelegateProvider.resourceUrlWhitelist([ 'self','*://www.youtube.com/**', '*://player.vimeo.com/video/**']);
 
@@ -75,7 +75,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
     // let token = localStorage.getItem('token');
     $http({
       method: 'GET',
-      url: `${Util.url}notificacao/auto-search/empresa_id/${localStorage.getItem('token')}`
+      url: Util.url+'notificacao/auto-search/empresa_id/'+localStorage.getItem('token')
     }).then(function successCallback(response) {
 
 

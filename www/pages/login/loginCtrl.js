@@ -32,7 +32,7 @@ function ($scope, $stateParams,$ionicPopup,$http,$location,$ionicHistory,$state,
         fName:email,
         fSenha:senha,
       };
-      $http.get(`${Util.url}login_empresa/${btoa(email)}.${btoa(senha)}`)
+      $http.get(Util.url+'login_empresa/'+btoa(email)+'.'+btoa(senha))
         .success(function(data){
           console.log(data.token)
  if(data.token == null || data.token == 'null'){
@@ -75,8 +75,8 @@ function ($scope, $stateParams,$ionicPopup,$http,$location,$ionicHistory,$state,
             localStorage.setItem('plano',data.plano);
             localStorage.setItem('tipo_usuario',data.tipo_usuario);
             console.log("tiririca121")
-            let token = localStorage.getItem('token');
-            $http.get(`${Util.url}perfilempresa/${token}`)
+            var token = localStorage.getItem('token');
+            $http.get(Util.url+"perfilempresa/"+token)
               .success(function(response){
                 console.log(response);
                 $rootScope.nome_restaurante = response.data.nome;
