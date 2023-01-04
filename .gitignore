@@ -64,4 +64,9 @@ typings/
 .env
 
 
+# .DS_Store files (Mac)
+.DS_Store
+/resources/.DS_Store
+/www/.DS_Store
+
 # End of https://www.gitignore.io/api/node
