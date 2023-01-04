@@ -1,3 +1,5 @@
+Eatinhouse App Restaurant
+
 # README #
 
 This README would normally document whatever steps are necessary to get your application up and running.
@@ -10,12 +12,43 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
+## Requirements ##
+### Node / npm
+Install Node / npm in your SO.
+* Mac:
+```
+brew install node
+```
+or using nvm:
+```
+brew install nvm
+```
+### Ionic CLI
+```
+npm install -g @ionic/cli
+```
+## Dependencies ##
+```
+npm install
+ionic init
+```
+or try:
+```
+rm -rf node_modules
+rm package-lock.json
+npm cache clean --force
+npm install 
+```
+### Run Application
+```
+ionic serve
+```
+
+### Database configuration
 * How to run tests
 * Deployment instructions
+
+Fonte: [Ionic Framework](https://ionicframework.com/docs/intro/cli)
 
 ### Contribution guidelines ###
 
