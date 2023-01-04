@@ -10,7 +10,7 @@ angular.module('app.controllers', [])
 //     $scope.acessoLogin = function(usuario, senha){
 //         $http({
 //             method: 'GET',
-//             url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=login-entregador&email='+usuario+'&senha='+senha
+//             url: 'https://www.eatinhouse.com/api-driver/?acao=login-entregador&email='+usuario+'&senha='+senha
 //         }).then(function successCallback(response) {
 //             // this callback will be called asynchronously
 //             // when the response is available
@@ -37,7 +37,7 @@ function ($scope, $stateParams, controleError, $http, $location) {
     
     $http({
         method: 'GET',
-        url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=pedido-completo&id='+$stateParams.venda_id
+        url: 'https://www.eatinhouse.com/api-driver/?acao=pedido-completo&id='+$stateParams.venda_id
     }).then(function successCallback(response) {
         // this callback will be called asynchronously
         // when the response is available
@@ -55,7 +55,7 @@ function ($scope, $stateParams, controleError, $http, $location) {
     $scope.realizarEntrega = function(){
         $http({
             method: 'GET',
-            url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=atualizar-status-pedido&id='+$stateParams.venda_id+'&status=2'
+            url: 'https://www.eatinhouse.com/api-driver/?acao=atualizar-status-pedido&id='+$stateParams.venda_id+'&status=2'
         }).then(function successCallback(response) {
             // this callback will be called asynchronously
             // when the response is available
@@ -72,7 +72,7 @@ function ($scope, $stateParams, controleError, $http, $location) {
     $scope.cancelarOrdem = function(){
         $http({
             method: 'GET',
-            url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=atualizar-status-pedido&id='+$stateParams.venda_id+'&status=4'
+            url: 'https://www.eatinhouse.com/api-driver/?acao=atualizar-status-pedido&id='+$stateParams.venda_id+'&status=4'
         }).then(function successCallback(response) {
             // this callback will be called asynchronously
             // when the response is available
@@ -99,7 +99,7 @@ function ($scope, $http, $stateParams, $location, controleError, uiGmapGoogleMap
     // $stateParams.venda_id
     $http({
         method: 'GET',
-        url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=pedido-completo&id='+$scope.venda_id
+        url: 'https://www.eatinhouse.com/api-driver/?acao=pedido-completo&id='+$scope.venda_id
     }).then(function successCallback(response) {
         // this callback will be called asynchronously
         // when the response is available
@@ -209,7 +209,7 @@ function ($scope, $http, $stateParams, $location, controleError, uiGmapGoogleMap
     $scope.aceitarEntrega = function(){
         $http({
             method: 'GET',
-            url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=atualizar-status-pedido&id='+$stateParams.venda_id+'&status=1'
+            url: 'https://www.eatinhouse.com/api-driver/?acao=atualizar-status-pedido&id='+$stateParams.venda_id+'&status=1'
         }).then(function successCallback(response) {
             // this callback will be called asynchronously
             // when the response is available
@@ -226,7 +226,7 @@ function ($scope, $http, $stateParams, $location, controleError, uiGmapGoogleMap
     $scope.cancelarOrdem = function(){
         $http({
             method: 'GET',
-            url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=atualizar-status-pedido&id='+$stateParams.venda_id+'&status=4'
+            url: 'https://www.eatinhouse.com/api-driver/?acao=atualizar-status-pedido&id='+$stateParams.venda_id+'&status=4'
         }).then(function successCallback(response) {
             // this callback will be called asynchronously
             // when the response is available
@@ -287,7 +287,7 @@ function ($scope, $stateParams, $http, $rootScope, $ionicPopup, $location, sideM
     //     if($rootScope.online==1){
     //         $http({
     //             method: 'GET',
-    //             url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=pedido-pendente&entregador_id='+$rootScope.entregador_id
+    //             url: 'https://www.eatinhouse.com/api-driver/?acao=pedido-pendente&entregador_id='+$rootScope.entregador_id
     //         }).then(function successCallback(response) {
     //             // this callback will be called asynchronously
     //             // when the response is available
@@ -359,7 +359,7 @@ function ($scope, $stateParams, $http, controleError, $location) {
     
     $http({
         method: 'GET',
-        url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=pedido-completo&id='+$stateParams.venda_id
+        url: 'https://www.eatinhouse.com/api-driver/?acao=pedido-completo&id='+$stateParams.venda_id
     }).then(function successCallback(response) {
         if(controleError.checkError(response)){
            console.log(response);
@@ -374,7 +374,7 @@ function ($scope, $stateParams, $http, controleError, $location) {
         
         $http({
             method: 'GET',
-            url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=coletar-pedido&id='+$stateParams.venda_id+'&coletado='+retorno.toString()
+            url: 'https://www.eatinhouse.com/api-driver/?acao=coletar-pedido&id='+$stateParams.venda_id+'&coletado='+retorno.toString()
         }).then(function successCallback(response) {
             if(controleError.checkError(response)){
                 $location.path('/entregar-cliente/'+$stateParams.venda_id);
@@ -390,7 +390,7 @@ function ($scope, $stateParams, $http, controleError, $location) {
     $scope.cancelarOrdem = function(){
         $http({
             method: 'GET',
-            url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=atualizar-status-pedido&id='+$stateParams.venda_id+'&status=4'
+            url: 'https://www.eatinhouse.com/api-driver/?acao=atualizar-status-pedido&id='+$stateParams.venda_id+'&status=4'
         }).then(function successCallback(response) {
             // this callback will be called asynchronously
             // when the response is available
@@ -433,7 +433,7 @@ function ($scope, $stateParams, $http, controleError, $location, $ionicPopup, $s
     
     $http({
         method: 'GET',
-        url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=pedido-completo&id='+$stateParams.venda_id
+        url: 'https://www.eatinhouse.com/api-driver/?acao=pedido-completo&id='+$stateParams.venda_id
     }).then(function successCallback(response) {
         if(controleError.checkError(response)){
             console.log(response);
@@ -448,7 +448,7 @@ function ($scope, $stateParams, $http, controleError, $location, $ionicPopup, $s
         
         $http({
             method: 'GET',
-            url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=entregar-pedido&venda_id='+$stateParams.venda_id+'&entregue='+retorno.toString()
+            url: 'https://www.eatinhouse.com/api-driver/?acao=entregar-pedido&venda_id='+$stateParams.venda_id+'&entregue='+retorno.toString()
         }).then(function successCallback(response) {
             if(controleError.checkError(response)){
                 $location.path('/menu/aguardando');
@@ -467,7 +467,7 @@ function ($scope, $stateParams, $http, controleError, $location, $ionicPopup, $s
     $scope.cancelarOrdem = function(){
         $http({
             method: 'GET',
-            url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=atualizar-status-pedido&id='+$stateParams.venda_id+'&status=4'
+            url: 'https://www.eatinhouse.com/api-driver/?acao=atualizar-status-pedido&id='+$stateParams.venda_id+'&status=4'
         }).then(function successCallback(response) {
             // this callback will be called asynchronously
             // when the response is available
@@ -503,7 +503,7 @@ function ($scope, $stateParams, $rootScope, $http, controleError) {
     
     $http({
         method: 'GET',
-        url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=lista-pedido&entregador_id='+$rootScope.entregador_id
+        url: 'https://www.eatinhouse.com/api-driver/?acao=lista-pedido&entregador_id='+$rootScope.entregador_id
     }).then(function successCallback(response) {
         if(controleError.checkError(response)){
            console.log(response);
@@ -520,7 +520,7 @@ function ($scope, $stateParams, $rootScope, $http, controleError) {
 function ($scope, $stateParams, $http, $location, controleError) {
     $http({
         method: 'GET',
-        url: 'https://www.eatinhousedelivery.co.uk/api-driver/?acao=lista-ajuda'
+        url: 'https://www.eatinhouse.com/api-driver/?acao=lista-ajuda'
     }).then(function successCallback(response) {
         if(controleError.checkError(response)){
            console.log(response);

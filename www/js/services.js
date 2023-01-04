@@ -48,7 +48,7 @@ angular.module('app.services', [])
 .service('Util', [function(){
     return{
 
-        url: 'https://www.eatinhousedelivery.co.uk/api/'
+        url: 'https://www.eatinhouse.com/api/'
     }
 }])
 
