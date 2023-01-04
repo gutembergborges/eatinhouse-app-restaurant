@@ -1,10 +1,9 @@
 {
   "name": "clickbd",
-  "app_id": "",
-  "ionicServeAddress": "192.168.25.109",
   "integrations": {
     "cordova": {}
   },
   "type": "ionic1",
+  "ionicServeAddress": "192.168.25.109",
   "watchPatterns": []
 }
