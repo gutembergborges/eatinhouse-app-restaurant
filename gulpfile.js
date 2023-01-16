@@ -6,15 +6,14 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
+rimraf = require('rimraf');
 
 var paths = {
   sass: ['./scss/**/*.scss']
 };
 
-gulp.task('default', ['sass']);
-
-gulp.task('sass', function(done) {
-  gulp.src('./scss/ionic.app.scss')
+function runSass () {
+  return gulp.src('./scss/ionic.app.scss')
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(gulp.dest('./www/css/'))
@@ -24,7 +23,13 @@ gulp.task('sass', function(done) {
     .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest('./www/css/'))
     .on('end', done);
-});
+}
+
+function clean (cb) {
+  rimraf('app/main-built.js', cb);
+}
+
+gulp.task('clean', clean);
 
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
@@ -49,3 +54,5 @@ gulp.task('git-check', function(done) {
   }
   done();
 });
+
+exports.default = runSass
