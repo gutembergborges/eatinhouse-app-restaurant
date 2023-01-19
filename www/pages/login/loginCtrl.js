@@ -96,7 +96,8 @@ function ($scope, $stateParams,$ionicPopup,$http,$location,$ionicHistory,$state,
           
            // $location.path('/side-menu/index');
           // $state.go('menu.login');
-          $scope.$digest();
+          //$scope.$digest();     // commented to fix definetely Error: [$rootScope:inprog] $digest already in progress
+                                  // "Normally you do not need to trigger a digest manually, because every external action that can trigger changes in your application", font: https://code.angularjs.org/1.5.3/docs/error/$rootScope/inprog?p0=$digest
 
 }
 
