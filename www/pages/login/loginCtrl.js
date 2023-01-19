@@ -96,7 +96,7 @@ function ($scope, $stateParams,$ionicPopup,$http,$location,$ionicHistory,$state,
           
            // $location.path('/side-menu/index');
           // $state.go('menu.login');
-          $scope.$apply();
+          $scope.$digest();
 
 }
 
