@@ -4,10 +4,10 @@ angular.module('firebaseConfig', ['firebase'])
 
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyCsftCBlmW8S5w_MzCskTmfvyhql0gCj4g",
-    authDomain: "autorede24h.firebaseapp.com",
+    apiKey: "AIzaSyAkkdQC8Z9b_EB9AKt6eDvSSCbJwy7kUlU",
+    authDomain: "sincere-signal-375619.firebaseapp.com",
     databaseURL: "https://autorede24h.firebaseio.com",
-    storageBucket: "autorede24h.appspot.com",
+    storageBucket: "sincere-signal-375619.appspot.com",
   };
   firebase.initializeApp(config);
 
