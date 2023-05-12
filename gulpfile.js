@@ -12,8 +12,14 @@ var paths = {
   sass: ['./scss/**/*.scss']
 };
 
-function runSass () {
-  return gulp.src('./scss/ionic.app.scss')
+function clean (cb) {
+  rimraf('app/main-built.js', cb);
+}
+
+gulp.task('clean', clean);
+
+gulp.task('sass', function(done) {
+  gulp.src('./scss/ionic.app.scss')
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(gulp.dest('./www/css/'))
@@ -23,23 +29,14 @@ function runSass () {
     .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest('./www/css/'))
     .on('end', done);
-}
-
-function clean (cb) {
-  rimraf('app/main-built.js', cb);
-}
-
-gulp.task('clean', clean);
-
-gulp.task('watch', function() {
-  gulp.watch(paths.sass, ['sass']);
 });
 
-gulp.task('install', ['git-check'], function() {
-  return bower.commands.install()
-    .on('log', function(data) {
-      gutil.log('bower', gutil.colors.cyan(data.id), data.message);
-    });
+gulp.task('default', gulp.series('sass'));
+
+gulp.task('ionic:watch:before', gulp.series('default'));
+
+gulp.task('watch', function() {
+  gulp.watch(paths.sass).on('change', gulp.series('default'));
 });
 
 gulp.task('git-check', function(done) {
@@ -55,4 +52,9 @@ gulp.task('git-check', function(done) {
   done();
 });
 
-exports.default = runSass
+gulp.task('install', gulp.series('git-check'), function() {
+  return bower.commands.install()
+    .on('log', function(data) {
+      gutil.log('bower', gutil.colors.cyan(data.id), data.message);
+    });
+});
