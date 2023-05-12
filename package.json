@@ -15,6 +15,7 @@
   "devDependencies": {
     "@ionic/v1-toolkit": "3.2.20",
     "bower": "^1.8.14",
+    "cordova-android": "^10.1.2",
     "gulp": "^4.0.2",
     "gulp-util": "^2.2.14",
     "shelljs": "^0.8.5"
@@ -32,9 +33,7 @@
     "android"
   ],
   "cordova": {
-    "platforms": [
-      "android"
-    ],
+    "platforms": [],
     "plugins": {
       "cordova-plugin-media": {},
       "cordova-plugin-background-mode": {}
