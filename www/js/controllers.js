@@ -177,7 +177,7 @@ function ($scope, $http, $stateParams, $location, controleError, uiGmapGoogleMap
     var my_media;
         
     // // Play the audio file at url
-    // my_media = new Media('http://www.eatinhousedelivery.com/audio/song.mp3',
+    // my_media = new Media('https://www.eatinhouse.com/audio/song.mp3',
     //     // success callback
     //     function () {
     //         console.log("playAudio():Audio Success");

@@ -115,7 +115,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
     var my_media;
         
     // // Play the audio file at url
-    my_media = new Media('http://www.eatinhousedelivery.com/audio/song.mp3',
+    my_media = new Media('https://www.eatinhouse.com/audio/song.mp3',
         // success callback
         function () {
             console.log("playAudio():Audio Success");
