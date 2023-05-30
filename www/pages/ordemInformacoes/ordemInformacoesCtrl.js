@@ -12,7 +12,7 @@ console.log($stateParams.id);
     const token = localStorage.getItem('token');
     const id =  $scope.id;
 
-        $http.get('http://www.eatinhousedelivery.co.uk/api/restaurantepedidos/search/detalhe/pedido/'+id)
+        $http.get('https://www.eatinhouse.com/api/restaurantepedidos/search/detalhe/pedido/'+id)
         .success(function(response){
             console.log(response);                  
             $scope.meusPedidosDetalhe = response; 
@@ -47,7 +47,7 @@ console.log($stateParams.id);
 
         function alteraStatus(status,id,msg){
             const statusAceita = status;
-                $http.get('http://www.eatinhousedelivery.co.uk/api/restaurantepedidos/update/id/status-restaurante/'+id+'/'+statusAceita)
+                $http.get('https://www.eatinhouse.com/api/restaurantepedidos/update/id/status-restaurante/'+id+'/'+statusAceita)
                 .success(function(response){
                     console.log(response);                    
                 }).then(function successCallback(response) {
